@@ -1,0 +1,30 @@
+@startuml
+
+class Audi{
+    +void run()
+}
+class Byd{
+    +void run()
+}
+interface Car{
+    +void run()
+}
+Audi .down.|> Car : implement
+Byd .down.|> Car : implement
+
+class CarFactory01{
+    +static Car createCar(String type)
+}
+class Client2{
+    -CarFactory01.createCar("奥迪")
+    -CarFactory01.createCar("比亚迪")
+    ..
+    +run()
+    +run()
+}
+
+CarFactory01 .down.|> Byd : Realization
+CarFactory01 .down.|> Audi : Realization
+Client2 .down.|> CarFactory01 : Realization
+
+@enduml
