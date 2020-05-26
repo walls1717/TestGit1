@@ -1,8 +1,5 @@
 package com.cj.jdbc;
 
-import lombok.SneakyThrows;
-
-import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
@@ -10,9 +7,11 @@ import java.util.Properties;
 @SuppressWarnings("all")
 public class JDBCUtil {
 
-    static Properties pros = null; //可以帮助我们读取和处理资源文件的信息
+    //可以帮助我们读取和处理资源文件的信息
+    static Properties pros = null;
 
-    static { //加载JDBCUtil类的时候调用
+    //加载JDBCUtil类的时候调用
+    static {
         pros = new Properties();
         try {
             pros.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("db.properties"));
