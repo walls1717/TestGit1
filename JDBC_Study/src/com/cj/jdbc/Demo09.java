@@ -1,7 +1,5 @@
 package com.cj.jdbc;
 
-import lombok.SneakyThrows;
-
 import java.io.*;
 import java.sql.*;
 import java.text.DateFormat;

@@ -17,10 +17,10 @@ public class JdbcDemo1 {
 //        Class.forName("com.mysql.cj.jdbc.Driver");
         // 3. 获取数据库连接对象
 //        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db3", "root", "chengjie");
-        Connection conn = DriverManager.getConnection("jdbc:mysql:///db3", "root", "chengjie");
+        Connection conn = DriverManager.getConnection("jdbc:mysql:///db4", "root", "chengjie");
         // 4. 定义 sql 语句
 //        String sql = "update account set balance = 2000 where id = 1";
-        String sql = "update account set balance = 2000";
+        String sql = "update user set password = 2000";
         // 5. 获取执行 sql 对象 Statement
         Statement stmt = conn.createStatement();
         // 6. 执行

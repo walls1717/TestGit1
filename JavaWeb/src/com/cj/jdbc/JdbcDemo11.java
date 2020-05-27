@@ -2,18 +2,15 @@ package com.cj.jdbc;
 
 import com.cj.utils.JdbcUtils;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Scanner;
 
 /**
- * 登录功能的基本实现
+ * 预防 sql 注入登录
  * @version 2020-5-27
  * @author CJ
  */
-public class JdbcDemo10 {
+public class JdbcDemo11 {
     public static void main(String[] args) {
         //键盘录入，接收用户名密码
         var scanner = new Scanner(System.in);
@@ -22,7 +19,7 @@ public class JdbcDemo10 {
         System.out.print("请输入密码：");
         String password = scanner.nextLine();
         //调用方法
-        boolean flag = new JdbcDemo10().login(userName, password);
+        boolean flag = new JdbcDemo11().login(userName, password);
         //判断结果，输出不同语句
         if (flag) {
             System.out.println("登录成功");
@@ -43,23 +40,26 @@ public class JdbcDemo10 {
         }
         // 连接数据库判断是否登录成功
         Connection connection = null;
-        Statement statement = null;
+        PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
             // 获取连接
             connection = JdbcUtils.getConnection();
             //定义sql
-            String sql = "select * from user where username = '"+userName+"' and password = '"+password+"'";
+            String sql = "select * from user where username = ? and password = ?";
             //获取执行sql的对象
-            statement = connection.createStatement();
+            preparedStatement = connection.prepareStatement(sql);
+            //给？赋值的操作
+            preparedStatement.setString(1, userName);
+            preparedStatement.setString(2, password);
             //执行查询
-            resultSet = statement.executeQuery(sql);
+            resultSet = preparedStatement.executeQuery();
             //判断
             return resultSet.next();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {
-            JdbcUtils.close(resultSet, statement, connection);
+            JdbcUtils.close(resultSet, preparedStatement, connection);
         }
 
         return false;

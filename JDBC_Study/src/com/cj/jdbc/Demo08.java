@@ -1,6 +1,5 @@
 package com.cj.jdbc;
 
-import lombok.SneakyThrows;
 
 import java.sql.*;
 import java.text.DateFormat;
@@ -20,9 +19,7 @@ public class Demo08 {
      * @param dateStr
      * @return
      */
-
-    @SneakyThrows
-    public static long str2Date(String dateStr) {
+    public static long str2Date(String dateStr) throws ParseException {
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         return format.parse(dateStr).getTime();
     }

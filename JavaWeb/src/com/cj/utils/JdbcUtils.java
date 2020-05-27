@@ -31,11 +31,11 @@ public class JdbcUtils {
             Properties pro = new Properties();
 
             // 获取 src 路径下的文件方式
-            ClassLoader classLoader = JdbcUtils.class.getClassLoader();
+            /*ClassLoader classLoader = JdbcUtils.class.getClassLoader();
             URL resource = classLoader.getResource("jdbc.properties");
-            String path = resource.getPath();
+            String path = resource.getPath();*/
 
-            pro.load(new FileReader(path));
+            pro.load(new FileReader("D:\\IntelliJ IDEA\\Test\\JavaWeb\\src\\jdbc.properties"));
 
             url = pro.getProperty("url");
             user = pro.getProperty("user");
