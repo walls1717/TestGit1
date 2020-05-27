@@ -34,7 +34,6 @@ public class JdbcUtils {
             ClassLoader classLoader = JdbcUtils.class.getClassLoader();
             URL resource = classLoader.getResource("jdbc.properties");
             String path = resource.getPath();
-            System.out.println(path);
 
             pro.load(new FileReader(path));
 
