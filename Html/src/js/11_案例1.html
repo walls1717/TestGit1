@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例1</title>
+</head>
+<body>
+<img id="light" src="../image/banner_1.jpg"/>
+
+<script>
+    var light = document.getElementById("light");
+    var flag = false;
+    light.onclick = function() {
+        if(flag) {
+            light.src = "../image/banner_2.jpg";
+            flag = false;
+        } else {
+            light.src="../image/banner_1.jpg"
+            flag = true;
+        }
+    }
+</script>
+</body>
+</html>
