@@ -1,5 +1,6 @@
 package cn.circle.gui;
 
+import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -16,7 +17,7 @@ public class Example2 {
         f.setSize(220, 300);
         f.setLocation(200, 300);
         // 把按钮添加到 f 窗口中
-        f.add(new Button("按钮1"));
+        f.add(new JButton("按钮1"));
 
         f.setVisible(true);
     }
