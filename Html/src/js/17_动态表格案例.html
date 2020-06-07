@@ -44,20 +44,20 @@
         <td>1</td>
         <td>任我行</td>
         <td>男</td>
-        <td><a href="javascript:void(0);">删除</a></td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
     </tr>
 
     <tr>
         <td>2</td>
         <td>岳不群</td>
         <td>?</td>
-        <td><a href="javascript:void(0);">删除</a></td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
     </tr>
 </table>
 
 <script>
     // 获取按钮
-    document.getElementById("btn_add").onclick = function() {
+/*    document.getElementById("btn_add").onclick = function() {
         // 获取文本框内容
         let id = document.getElementById("id").value;
         let name = document.getElementById("name").value;
@@ -78,6 +78,7 @@
         let td_a = document.createElement("td");
         let ele_a = document.createElement("a");
         ele_a.setAttribute("href", "javascript:void(0);");
+        ele_a.setAttribute("onclick", "delTr(this);");
         let text_a = document.createTextNode("删除");
         ele_a.appendChild(text_a);
         td_a.appendChild(ele_a);
@@ -92,6 +93,33 @@
         let table = document.getElementsByTagName("table")[0];
         table.appendChild(tr);
 
+    }*/
+
+    // 使用 innerHTML 添加
+    document.getElementById("btn_add").onclick = function() {
+        // 获取文本框内容
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let gender = document.getElementById("gender").value;
+
+        // 获取 table
+        let table = document.getElementsByTagName("table")[0];
+
+        // 追加一行
+        table.innerHTML += "<tr>\n" +
+            "        <td>"+id+"</td>\n" +
+            "        <td>"+name+"</td>\n" +
+            "        <td>"+gender+"</td>\n" +
+            "        <td><a href=\"javascript:void(0);\" onclick=\"delTr(this);\">删除</a></td>\n" +
+            "    </tr>";
+    }
+
+    // 删除方法
+    function delTr(obj) {
+        let table = obj.parentNode.parentNode.parentNode;
+        let tr = obj.parentNode.parentNode;
+
+        table.removeChild(tr);
     }
 </script>
 </body>
