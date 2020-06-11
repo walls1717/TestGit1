@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<students>
+    <student number="heima_0001">
+        <name id="cj">
+            <xing>zhagn</xing>
+            <ming>san</ming>
+        </name>
+        <age>200</age>
+        <sex>female</sex>
+    </student>
+
+    <student number="heima_0002">
+        <name>Lisa</name>
+        <age>20</age>
+        <sex>female</sex>
+    </student>
+</students>
