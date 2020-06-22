@@ -44,7 +44,7 @@ public class CheckCodeServlet extends HttpServlet {
             char ch = str.charAt(index);
             sb.append(ch);
             // 写验证码
-            g.drawString(ch + "", width / 5 * i, height / 2);
+            g.drawString(ch + "", width / 2 * i, height / 2);
         }
         String checkCodeSession = sb.toString();
         // 将验证码存入 session
