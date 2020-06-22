@@ -9,8 +9,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- * JDBC 工具类，使用 Durid 连接池
- * @version 2020-6-12
+ * Jdbc 工具类，使用 druid 连接池
+ * @version 2020-6-21
  * @author CJ
  */
 public class JdbcUtils {
@@ -19,9 +19,9 @@ public class JdbcUtils {
 
     static {
         try {
-            // 加载配置文件
+            // 创建配置文件对象
             Properties pro = new Properties();
-            // 使用 ClassLoader 加载配置文件，获取字节输入流
+            // 使用类加载器，加载配置文件，获得字节输入流
             InputStream is = JdbcUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             pro.load(is);
             // 初始化连接池对象
@@ -33,15 +33,18 @@ public class JdbcUtils {
 
     /**
      * 获取连接池对象
+     * @return 连接池对象
      */
     public static DataSource getDataSource() {
         return ds;
     }
 
     /**
-     * 获取连接 Connection 对象
+     * 获取连接对象
+     * @return 连接对象
+     * @throws SQLException sql异常
      */
-    public static Connection getConnection() throws SQLException {
+    public static Connection connection() throws SQLException {
         return ds.getConnection();
     }
 }

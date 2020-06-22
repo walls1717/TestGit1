@@ -1,26 +1,27 @@
 package cn.cj.test;
 
-
 import cn.cj.dao.UserDao;
 import cn.cj.domain.User;
 import org.junit.Test;
 
 /**
  * 测试 UserDao
- * @version 2020-6-12
+ * @version 2020-6-22
  * @author CJ
  */
 public class UserDaoTest {
 
     @Test
-    public void testLogin() {
+    public void test() {
         User loginUser = new User();
-        loginUser.setUsername("superbaby");
+
+        loginUser.setUsername("Jack");
         loginUser.setPassword("123");
 
-        UserDao dao = new UserDao();
-        User user = dao.login(loginUser);
+        UserDao userDao = new UserDao();
 
-        System.out.println(user);
+        User login = userDao.login(loginUser);
+
+        System.out.println(login);
     }
 }

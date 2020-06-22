@@ -5,8 +5,6 @@ import cn.cj.domain.User;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 
-import java.lang.reflect.InvocationTargetException;
-
 /**
  * @author CJ
  */
