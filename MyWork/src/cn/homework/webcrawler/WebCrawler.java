@@ -114,7 +114,8 @@ public class WebCrawler {
             //post方式：提交数据
             conn.setRequestMethod("GET");
             conn.setRequestProperty(
-                    "User-Agent"," Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18363");
+                    "User-Agent",
+                    " Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18363");
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
             String msg = null;
             while (null != (msg = br.readLine())) {
