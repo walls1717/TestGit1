@@ -21,5 +21,13 @@
     ${3 div 4}<br/>
     ${3 % 4}<br/>
     ${3 mod 4}<br/>
+
+    <h4>empty</h4>
+    <%
+        String str = "abc";
+        request.setAttribute("str", str);
+    %>
+
+    ${empty str}
 </body>
 </html>

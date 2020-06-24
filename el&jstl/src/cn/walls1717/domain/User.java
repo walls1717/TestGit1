@@ -23,6 +23,15 @@ public class User {
         }
     }
 
+    public User() {
+    }
+
+    public User(String name, int age, Date birthday) {
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday;
+    }
+
     public String getName() {
         return name;
     }
