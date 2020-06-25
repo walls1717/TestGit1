@@ -3,6 +3,7 @@ package cn.walls1717.dao;
 import cn.walls1717.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户操作的 Dao
@@ -50,4 +51,20 @@ public interface UserDao {
      * @param user
      */
     void update(User user);
+
+    /**
+     * 查询总记录数
+     * @return
+     * @param condition
+     */
+    int findTotalCount(Map<String, String[]> condition);
+
+    /**
+     * 分页查询每页的记录
+     * @param start
+     * @param rows
+     * @param condition
+     * @return
+     */
+    List<User> findByPage(int start, int rows, Map<String, String[]> condition);
 }
