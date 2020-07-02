@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>walls1717</title>
+    <script>
+        function fun() {
+            // 发送异步请求
+            // 创建核心对象
+            let xmlhttp;
+            if(window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            // 建立连接
+            /*
+             * 请求方式：GET、POST
+             *  GET方式，请求参数在URL后边拼接，send方法空参
+             *  POST方式，请求参数在send方法中定义
+             * 请求的URL
+             * 同步或异步请求，true（异步）
+             */
+            xmlhttp.open("GET", "ajaxServlet?username=tom", true);
+
+            // 发送请求
+            xmlhttp.send();
+
+            // 接收并处理来自服务器的响应结果
+            // 获取方式：xmlhttp.responseText
+            // 什么时候获取？当服务器响应后再获取
+
+            // 当xmlhttp对象的就绪状态改变时，出发事件
+            xmlhttp.onreadystatechange=function() {
+                // 判断readyState就绪状态是否为4，判断status响应状态码是否为200
+                if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    let responseText = xmlhttp.responseText;
+                    alert(responseText);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="发送异步请求" onclick="fun();"/>
+<input/>
+</body>
+</html>
