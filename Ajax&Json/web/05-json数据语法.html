@@ -6,7 +6,10 @@
     <script>
         // 定义基本格式
         let person = {"name":"张三", "age":23, "gender":true};
-        alert(person);
+        // alert(person);
+        //let name = person.name;
+        let name = person["name"];
+        alert(name);
 
         // 嵌套格式 {}-->[]
         // 嵌套格式 []-->{}
@@ -16,8 +19,11 @@
                 {"name":"李四","age":24,"gender":true},
                 {"name":"王五","age":25,"gender":false}
                 ]
-        }
-        alert(persons);
+        };
+        // alert(persons);
+        let name1 = persons.psersons[2].name;
+        alert(name1);
+
 
     </script>
 </head>
