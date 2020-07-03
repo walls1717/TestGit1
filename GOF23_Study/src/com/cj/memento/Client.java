@@ -1,3 +1,4 @@
+/*
 package com.cj.memento;
 
 public class Client {
@@ -18,3 +19,4 @@ public class Client {
         System.out.println("第三次打印对象："+emp.getEname()+"---"+emp.getAge()+"---"+emp.getSalary());
     }
 }
+*/

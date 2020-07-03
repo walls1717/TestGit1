@@ -1,3 +1,4 @@
+/*
 package com.cj.observer;
 
 import lombok.Getter;
@@ -12,3 +13,4 @@ public class ConcreteSubject extends Subject {
         this.notifyAllObserver();
     }
 }
+*/

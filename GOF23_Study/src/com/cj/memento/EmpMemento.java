@@ -1,13 +1,16 @@
+/*
 package com.cj.memento;
 
 import lombok.Getter;
 import lombok.Setter;
 
+*/
 /**
  * 备忘录类
  *
  * @author CJ
- */
+ *//*
+
 
 public class EmpMemento {
     @Getter
@@ -26,3 +29,4 @@ public class EmpMemento {
         this.salary = e.getSalary();
     }
 }
+*/

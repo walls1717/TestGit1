@@ -1,12 +1,15 @@
+/*
 package com.cj.jvm.javassist;
 
 import javassist.*;
 
+*/
 /**
  * 测试使用javassist生成一个新的类
  *
  * @author CJ
- */
+ *//*
+
 
 public class Demo01 {
     public static void main(String[] args) throws Exception {
@@ -34,3 +37,4 @@ public class Demo01 {
         System.out.println("生成类，成功！");
     }
 }
+*/

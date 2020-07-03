@@ -1,3 +1,4 @@
+/*
 package com.cj.jvm.dynamiccomplie.common;
 
 import org.apache.commons.io.FileUtils;
@@ -12,11 +13,13 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+*/
 /**
  * 读取内容
  *
  * @author CJ
- */
+ *//*
+
 
 public class CIOTest03 {
     public static void main(String[] args) throws IOException {
@@ -37,3 +40,4 @@ public class CIOTest03 {
         }
     }
 }
+*/

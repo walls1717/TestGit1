@@ -1,14 +1,17 @@
+/*
 package com.cj.memento;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+*/
 /**
  * 源发器类
  *
  * @author CJ
- */
+ *//*
+
 
 @AllArgsConstructor
 public class Emp {
@@ -34,3 +37,4 @@ public class Emp {
         this.salary = mmt.getSalary();
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.cj.jvm.dynamiccomplie.common;
 
 import org.apache.commons.io.FileUtils;
@@ -9,11 +10,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * 拷贝
  *
  * @author CJ
- */
+ *//*
+
 
 public class CIOTest05 {
     public static void main(String[] args) throws IOException {
@@ -37,3 +40,4 @@ public class CIOTest05 {
         System.out.println(datas);
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.cj.observer2;
 
 import lombok.Getter;
@@ -17,3 +18,4 @@ public class ObserverA implements Observer {
     }
 
 }
+*/

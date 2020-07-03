@@ -1,3 +1,4 @@
+/*
 package com.cj.observer;
 
 
@@ -19,3 +20,4 @@ class ObserverA implements Observer{
         myState = ((ConcreteSubject)subject).getState();
     }
 }
+*/

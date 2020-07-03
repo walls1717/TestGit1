@@ -1,3 +1,4 @@
+/*
 package com.cj.jvm.dynamiccomplie.common;
 
 import org.apache.commons.io.FileUtils;
@@ -9,10 +10,12 @@ import org.apache.commons.io.filefilter.SuffixFileFilter;
 import java.io.File;
 import java.util.Collection;
 
+*/
 /**
  * 列出子孙级
  * @author CJ
- */
+ *//*
+
 
 public class CIOTest02 {
     public static void main(String[] args){
@@ -73,3 +76,4 @@ public class CIOTest02 {
         }
     }
 }
+*/

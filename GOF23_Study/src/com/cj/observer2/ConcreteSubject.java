@@ -1,5 +1,5 @@
-package com.cj.observer2;
-
+//package com.cj.observer2;
+/*
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,4 +17,4 @@ public class ConcreteSubject extends Observable {
         setChanged(); //表示目标对象已经做了更改
         notifyObservers(state); //通知所有的观察者
     }
-}
+}*/

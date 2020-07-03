@@ -1,3 +1,4 @@
+/*
 package com.cj.observer;
 
 public class Client {
@@ -34,3 +35,4 @@ public class Client {
         System.out.println(obs3.getMyState());
     }
 }
+*/

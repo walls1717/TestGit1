@@ -1,3 +1,4 @@
+/*
 package com.cj.jvm.javassist;
 
 import javassist.*;
@@ -5,17 +6,21 @@ import javassist.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+*/
 /**
  * 测试javassist的API
  *
  * @author CJ
- */
+ *//*
+
 
 @SuppressWarnings("all")
 public class Demo02 {
-    /**
+    */
+/**
      * 处理类的基本用法
-     */
+     *//*
+
     public static void test01() throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.get("com.cj.javassist.Emp");
@@ -29,9 +34,11 @@ public class Demo02 {
         System.out.println(cc.getInterfaces()); //获得接口
     }
 
-    /**
+    */
+/**
      * 测试产生新的方法
-     */
+     *//*
+
     public static void test02() throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.get("com.cj.javassist.Emp");
@@ -53,11 +60,13 @@ public class Demo02 {
 
     }
 
-    /**
+    */
+/**
      * 修改已有的方法信息
      *
      * @throws Exception
-     */
+     *//*
+
     public static void test03() throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.get("com.cj.javassist.Emp");
@@ -73,11 +82,13 @@ public class Demo02 {
         Object result = method.invoke(obj, 200);
     }
 
-    /**
+    */
+/**
      * 属性操作
      * @param args
      * @throws Exception
-     */
+     *//*
+
     public static void test04() throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.get("com.cj.javassist.Emp");
@@ -94,10 +105,12 @@ public class Demo02 {
         cc.addMethod(CtNewMethod.getter("setSalary", f1));
     }
 
-    /**
+    */
+/**
      * 构造器操作
      * @throws Exception
-     */
+     *//*
+
     public static void test05() throws Exception {
         ClassPool pool = ClassPool.getDefault();
         CtClass cc = pool.get("com.cj.javassist.Emp");
@@ -113,3 +126,4 @@ public class Demo02 {
         test05();
     }
 }
+*/
