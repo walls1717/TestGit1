@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+
+    <script>
+        $(function() {
+            // 发送 ajax 请求，加载所有省份数据
+            $.get("provinceServlet", {}, function (data) {
+                // 获取 select
+                let province = $("#province");
+                // 遍历 json 数组
+                $(data).each(function() {
+                    // 创建<option>
+                    let option = "<option name='"+this.id+"'>"+this.name+"</option>>";
+                    // 调用 select 的 append 追加
+                    province.append(option);
+                });
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <select id="province">
+        <option>--请选择省份--</option>
+    </select>
+</body>
+</html>
